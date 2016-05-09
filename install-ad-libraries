@@ -1,0 +1,44 @@
+#!/bin/bash
+
+nThreads = 2
+
+# unpack archives
+curl http://trilinos.org/oldsite/download/login.html?tid=tr12042gz
+
+tar -zxvf adept-1.1.tar.gz
+tar -zxvf CppAD.tar.gz
+tar -zxvf trilinos-12.4.2-Source.tar.gz
+tar -zxvf ADOL-C-2.6.1.tgz
+unzip FADBAD++-2.1.zip -d FADBAD++
+
+# build CppAD
+cd CppAD
+mkdir build
+mkdir local
+cd build
+cmake .. -Dcppad_prefix=../local
+make -j $nThreads install
+cd ../..
+
+# build adept
+cd adept-1.1
+mkdir local
+./configure --prefix=$PWD/local
+make -j $nThreads install
+cd ..
+
+# build trilinos
+cd trilinos-12.4.2-Source
+mkdir build
+mkdir local
+cd build
+cp ../../do-configure .
+./do-configure
+make -j $nThreads install
+cd ../..
+
+# build ADOLC
+cd ADOL-C-2.6.1
+./configure --prefix=$PWD/local
+make -n $nThreads install
+cd ..

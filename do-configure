@@ -1,0 +1,6 @@
+cmake \
+  -DCMAKE_BUILD_TYPE=RELEASE \
+  -DCMAKE_INSTALL_PREFIX=../local \
+  -DTrilinos_ENABLE_Sacado=ON \
+  -DTrilinos_ENABLE_TESTS=OFF \
+  ..

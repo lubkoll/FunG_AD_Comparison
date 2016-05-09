@@ -1,0 +1,17 @@
+In this folder you find the examples of adipose and muscle tissue for the computations of Section 6: Comparison with AD-libraries.
+All examples are compiled with the compiler flags "-std=c++1y -O3 -DNDEBUG" 
+
+Subfolders:
+
+  - ex1: f(x)     = x^{3/2} + sin(sqrt{x})
+  - ex2: f(x)     = cos(x) + sin(exp(sqrt{x})+1)
+  - ex3: f(x,y,z) = y*sqrt{x} + sin(sqrt{x}) + z
+ 
+ 
+In each of the subfolders the corresponding examples can be compiled and run with the following commands:
+ 
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - ./compare
