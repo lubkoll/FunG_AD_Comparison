@@ -11,6 +11,7 @@ before_install:
   - sudo apt-get install liblapack-dev
   - sudo apt-get install libgomp1
   - sudo apt-get install wget
+  - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
   - sudo apt-get install git-lfs
   - git lfs install
   - ./install-ad-libraries

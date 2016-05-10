@@ -1,7 +1,6 @@
 #!/bin/bash
 ls -al
 file trilinos-12.4.2-Source.tar.gz
-less trilinos-12.4.2-Source.tar.gz
 # unpack archives
 tar -zxvf adept-1.1.tar.gz
 tar -zxvf CppAD.tar.gz
