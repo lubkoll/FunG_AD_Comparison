@@ -9,7 +9,8 @@ before_install:
   - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-4.9 90
   - sudo apt-get install libblas-dev
   - sudo apt-get install liblapack-dev
-  - sudo apt-get install libgomp1 
+  - sudo apt-get install libgomp1
+  - sudo apt-get install wget
   - ./install-ad-libraries
 script:
   - cd comparison-with-ad-libraries

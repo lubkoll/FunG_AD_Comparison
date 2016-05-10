@@ -2,9 +2,10 @@
 
 var nThreads = 2
 
-# unpack archives
-curl http://trilinos.org/oldsite/download/login.html?tid=tr12042gz
+# download trilinos
+wget http://trilinos.org/oldsite/download/login.html?tid=tr12042gz
 
+# unpack archives
 tar -zxvf adept-1.1.tar.gz
 tar -zxvf CppAD.tar.gz
 tar -zxvf trilinos-12.4.2-Source.tar.gz
