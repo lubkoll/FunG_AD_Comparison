@@ -1,7 +1,5 @@
 #!/bin/bash
 
-var nThreads = 2
-
 # download trilinos
 wget http://trilinos.org/oldsite/download/login.html?tid=tr12042gz
 
@@ -18,14 +16,14 @@ mkdir build
 mkdir local
 cd build
 cmake .. -Dcppad_prefix=../local
-make -j $nThreads install
+make install
 cd ../..
 
 # build adept
 cd adept-1.1
 mkdir local
 ./configure --prefix=$PWD/local
-make -j $nThreads install
+make install
 cd ..
 
 # build trilinos
@@ -35,11 +33,11 @@ mkdir local
 cd build
 cp ../../do-configure .
 ./do-configure
-make -j $nThreads install
+make install
 cd ../..
 
 # build ADOLC
 cd ADOL-C-2.6.1
 ./configure --prefix=$PWD/local
-make -n $nThreads install
+make install
 cd ..
