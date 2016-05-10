@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nThreads = 2
+var nThreads = 2
 
 # unpack archives
 curl http://trilinos.org/oldsite/download/login.html?tid=tr12042gz
