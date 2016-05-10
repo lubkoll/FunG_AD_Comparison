@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ls
 # unpack archives
 tar -zxvf adept-1.1.tar.gz
 tar -zxvf CppAD.tar.gz
