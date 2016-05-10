@@ -1,0 +1,1 @@
+trilinos-12.4.2-Source.tar.gz filter=lfs diff=lfs merge=lfs -text
