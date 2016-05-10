@@ -11,7 +11,7 @@ set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y")
 
 include_directories(../../adept-1.1/local/include)
-include_directories(../../FADBAD++)
+include_directories(../../FADBAD++/FADBAD++)
 include_directories(../../trilinos-12.4.2-Source/local/include)
 include_directories(../../FunG)
 include_directories(../../CppAD/local/include)

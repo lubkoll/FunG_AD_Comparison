@@ -38,6 +38,7 @@ cd ../..
 
 # build ADOLC
 cd ADOL-C-2.6.1
+mkdir local
 ./configure --prefix=$PWD/local
 make install
 cd ..
