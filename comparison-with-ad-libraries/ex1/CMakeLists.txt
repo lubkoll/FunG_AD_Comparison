@@ -10,7 +10,7 @@ set(CMAKE_BUILD_TYPE Release)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y")
 
-find_package(Trilinos PATHS ../../trilinos-12.4.2-Source)
+find_package(Trilinos PATHS ../../trilinos-12.4.2-Source/local/lib/cmake/Trilinos)
 
 include_directories(../../adept-1.1/local/include)
 include_directories(../../FADBAD++/FADBAD++)
