@@ -25,4 +25,4 @@ link_directories(../../CppAD/local/lib)
 link_directories(../../ADOL-C-2.6.1/local/lib64)
 
 add_executable(compare compare.cpp)
-target_link_libraries(compare ${Trilinos_LIBRARIES} gomp adept adolc)
+target_link_libraries(compare ${Trilinos_LIBRARIES} adept gomp adolc)
