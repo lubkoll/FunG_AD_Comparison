@@ -14,12 +14,12 @@ find_package(Trilinos PATHS ../../trilinos-12.4.2-Source/local/lib/cmake/Trilino
 
 include_directories(../../adept-1.1/local/include)
 include_directories(../../FADBAD++/FADBAD++)
-include_directories(Trilinos_INCLUDE_DIRS)
+include_directories(${Trilinos_INCLUDE_DIRS})
 include_directories(../../FunG)
 include_directories(../../CppAD/local/include)
 include_directories(../../ADOL-C-2.6.1/local/include)
 
-link_directories(Trilinos_LIBRARY_DIRS)
+link_directories(${Trilinos_LIBRARY_DIRS})
 link_directories(../../adept-1.1/local/lib)
 link_directories(../../CppAD/local/lib)
 link_directories(../../ADOL-C-2.6.1/local/lib64)
