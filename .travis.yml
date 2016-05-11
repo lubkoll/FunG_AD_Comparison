@@ -1,11 +1,13 @@
 language: cpp
 before_install:
   - $CXX --version
-  - sudo apt-get install software-properties-common
-  - sudo add-apt-repository ppa:george-edison55/cmake-3.x -y
-  - sudo apt-get --purge remove -qq cmake
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq cmake
+  - wget http://www.cmake.org/files/v3.4/cmake-3.4.1.tar.gz 
+  - tar -xvzf cmake-3.4.1.tar.gz 
+  - cd cmake-3.4.1
+  - ./configure
+  - make
+  - sudo make install
+  - sudo update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1 --force 
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update -qq
   - sudo apt-get install -qq g++-4.9
@@ -15,7 +17,6 @@ before_install:
   - sudo apt-get install libblas-dev
   - sudo apt-get install liblapack-dev
   - sudo apt-get install libgomp1
-  - sudo apt-get install wget
   - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
   - sudo apt-get install git-lfs
   - git lfs install
