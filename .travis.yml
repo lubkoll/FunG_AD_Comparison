@@ -7,6 +7,7 @@ before_install:
   - ./configure
   - make
   - sudo make install
+  - cd ..
   - sudo update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1 --force 
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update -qq
